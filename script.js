@@ -14,7 +14,12 @@ function update() {
     camera.update();
 
     sceene.fillStyle = "blue"
-    sceene.fillRect(300 - camera.x,400 - camera.y,100,100)
+    sceene.fillRect(300*zoom + camera.x + zoomX,400*zoom + camera.y + zoomY,100*zoom,100*zoom)
 
+    sceene.fillStyle = "red"
+    sceene.fillRect(600*zoom + camera.x + zoomX,200*zoom + camera.y + zoomY,100*zoom,100*zoom)
+
+    createCursor();
+    
     requestAnimationFrame(update)
 }

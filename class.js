@@ -17,8 +17,8 @@ class Camera {
 
     update() {
         if(this.drag) {
-            this.x += this.dragVec.x - mouseX;
-            this.y += this.dragVec.y - mouseY;
+            this.x -= this.dragVec.x - mouseX;
+            this.y -= this.dragVec.y - mouseY;
             this.dragVec = new Vector2(mouseX,mouseY);
         }
     }
